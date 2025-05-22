@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Game Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h2>Describe Your Game Idea</h2>
+  <form id="gameForm">
+    <input type="text" id="gameIdea" placeholder="Describe your game idea" />
+    <button type="submit">Generate Game</button>
+  </form>
+  <pre id="output"></pre>
+
+  <script>
+    document.getElementById('gameForm').onsubmit = async (e) => {
+      e.preventDefault();
+      const idea = document.getElementById('gameIdea').value;
+      document.getElementById('output').textContent = "Game generated code for: " + idea;
+    };
+  </script>
+</body>
+</html>
