@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GameGenieTech - AI Game Generator</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
+  <style>
+    /* Reset & base */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #1a1a2e, #16213e);
+      color: #eaeaea;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    a { color: #00adb5; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem;
+      flex-grow: 1;
+    }
+    header {
+      text-align: center;
+      padding-top: 4rem;
+      padding-bottom: 2rem;
+    }
+    header h1 {
+      font-weight: 600;
+      font-size: 2.8rem;
+      margin-bottom: 0.5rem;
+      color: #00adb5;
+      letter-spacing: 1.2px;
+    }
+    header p {
+      font-weight: 300;
+      font-size: 1.2rem;
+      color: #b2becd;
+    }
+    form {
+      margin-top: 2rem;
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+    input[type="text"] {
+      flex-grow: 1;
+      padding: 0.7rem 1rem;
+      border-radius: 4px;
+      border: none;
+      font-size: 1rem;
+    }
+    button {
+      background: #00adb5;
+      border: none;
+      padding: 0 1.5rem;
+      border-radius: 4px;
+      color: #fff;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background: #009ea7;
+    }
+    section.features, section.shop {
+      background: #0f3460;
+      border-radius: 8px;
+      padding: 2rem;
+      margin-top: 3rem;
+    }
+    section.features h2, section.shop h2 {
+      color: #00adb5;
+      margin-bottom: 1rem;
+      font-weight: 600;
+      font-size: 1.8rem;
+      text-align: center;
+    }
+    ul {
+      list-style-type: none;
+      font-weight: 300;
+      color: #dcdde1;
+      line-height: 1.6;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    ul li {
+      margin-bottom: 0.8rem;
+      padding-left: 1.2rem;
+      position: relative;
+    }
+    ul li::before {
+      content: "✔";
+      color: #00ffdc;
+      position: absolute;
+      left: 0;
+    }
+    section.shop ul li {
+      color: #ffda79;
+    }
+    footer {
+      background: #1f1f38;
+      padding: 1rem 0;
+      text-align: center;
+      font-weight: 300;
+      font-size: 0.9rem;
+      color: #7f8c8d;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>GameGenieTech AI Game Generator</h1>
+      <p>Describe your game idea below and watch it come to life instantly!</p>
+    </header>
+    <form id="gameForm">
+      <input type="text" id="gameInput" placeholder="Enter your game idea..." required />
+      <button type="submit">Generate Game</button>
+    </form>
+
+    <section class="features">
+      <h2>Features</h2>
+      <ul>
+        <li>Instant AI-powered game generation</li>
+        <li>No payment required — 100% free for you</li>
+        <li>Easy to use interface</li>
+        <li>Multiple game genres supported</li>
+        <li>Save and share your games</li>
+      </ul>
+    </section>
+
+    <section class="shop">
+      <h2>Premium Plans</h2>
+      <ul>
+        <li>All features unlocked — completely free for you</li>
+        <li>Unlimited game generations</li>
+        <li>No ads or restrictions</li>
+        <li>Exclusive support and updates</li>
+      </ul>
+    </section>
+  </div>
+  <footer>
+    Created by Abdirahman — Company of ZMA
+  </footer>
+  <script>
+    document.getElementById('gameForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const input = document.getElementById('gameInput').value.trim();
+      if (!input) return alert('Please enter a game idea!');
+      alert('Game generated! (This is a demo, real AI generation coming soon.)\\nYour idea: ' + input);
+      document.getElementById('gameInput').value = '';
+    });
+  </script>
+</body>
+</html>
